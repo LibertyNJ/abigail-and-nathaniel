@@ -36,7 +36,7 @@ export default function Home({ mediumBreakpoint }) {
           className="d-none d-md-block display-1"
           style={{ marginLeft: '5%' }}
         >
-          Abigail <Ampersand height="1em" /> Nathaniel
+          Abigail <Ampersand height="1em" width="1em" /> Nathaniel
         </h1>
       </Container>
       <Countdown

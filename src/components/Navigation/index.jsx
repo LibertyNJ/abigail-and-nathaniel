@@ -31,7 +31,7 @@ export default class Navigation extends React.Component {
         {...restProps}
       >
         <Navbar.Brand className="d-md-none">
-          Abigail <Ampersand height="1em" /> Nathaniel
+          Abigail <Ampersand height="1em" width="1em" /> Nathaniel
         </Navbar.Brand>
         <Navbar.Toggle
           className="border-0"
