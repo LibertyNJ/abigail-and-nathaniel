@@ -26,14 +26,7 @@ export default class IndexPage extends React.Component {
   };
 
   listenForMediumBreakpointChange = () => {
-    this.mediumBreakpoint.addEventListener(
-      'change',
-      this.handleMediumBreakpointChange
-    );
-  };
-
-  handleMediumBreakpointChange = event => {
-    this.setState({ isUnderMediumBreakpoint: event.matches });
+    this.mediumBreakpoint.addListener(this.handleMediumBreakpointChange);
   };
 
   componentWillUnmount = () => {
@@ -41,7 +34,11 @@ export default class IndexPage extends React.Component {
   };
 
   stopListeningForMediumBreakpointChange = () => {
-    this.mediumBreakpoint.removeEventListener('change');
+    this.mediumBreakpoint.removeListener(this.handleMediumBreakpointChange);
+  };
+
+  handleMediumBreakpointChange = event => {
+    this.setState({ isUnderMediumBreakpoint: event.matches });
   };
 
   render = () => {
