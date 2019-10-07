@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.section {
+  min-height: calc(100vh - #{$navigation-height});
+  padding: $spacer 0;
+
+  &:first-child {
+    margin-top: $navigation-height;
+    padding: 0;
+  }
+}

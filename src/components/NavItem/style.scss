@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.nav-link {
+  border-bottom: 0px $primary solid;
+  border-color: white;
+  margin-bottom: 0px;
+  padding-bottom: 9px;
+  transition: all 500ms;
+
+  &.active {
+    border-bottom: 3px $primary solid;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+    transition: all 500ms;
+  }
+}

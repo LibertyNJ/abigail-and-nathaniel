@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.countdown-segment {
+  &__label {
+    font-size: 1.25 * $font-size-base;
+  }
+
+  &__number {
+    font-size: 2 * $font-size-base;
+  }
+}
