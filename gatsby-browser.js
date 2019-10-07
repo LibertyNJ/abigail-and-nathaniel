@@ -5,3 +5,11 @@
  */
 
 // You can delete this file if you're not using it
+
+// IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
+export const onClientEntry = () => {
+  if (typeof window.IntersectionObserver === 'undefined') {
+    import('intersection-observer');
+    console.log('# IntersectionObserver is polyfilled!');
+  }
+};
