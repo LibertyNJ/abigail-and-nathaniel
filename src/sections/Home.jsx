@@ -31,7 +31,7 @@ export default function Home({ mediumBreakpoint }) {
       id="home"
       style={{ backgroundPosition: '12.5% 100%' }}
     >
-      <Container className="flex-grow-1" fluid>
+      <Container className="flex-grow-1 flex-shrink-0" fluid>
         <h1
           className="d-none d-md-block display-1"
           style={{ marginLeft: '5%' }}
@@ -41,7 +41,7 @@ export default function Home({ mediumBreakpoint }) {
       </Container>
       <Countdown
         className="flex-grow-0"
-        targetDate={new Date('2020-05-30T16:30:00-04:00')}
+        targetDate={new Date('2020-05-30T16:00:00-04:00')}
       />
     </MajorSection>
   );

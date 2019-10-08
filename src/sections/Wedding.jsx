@@ -57,6 +57,9 @@ export default function Wedding({ mediumBreakpoint }) {
               <Divider className="mx-auto my-2 w-25" />
               <ul className="list-unstyled">
                 <li>
+                  <Bold>Pre-ceremony</Bold>: 4:00&nbsp;pm
+                </li>
+                <li>
                   <Bold>Ceremony</Bold>: 4:30&nbsp;pm
                 </li>
                 <li>

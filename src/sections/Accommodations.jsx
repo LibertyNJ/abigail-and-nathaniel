@@ -38,34 +38,8 @@ export default function Accommodations({ mediumBreakpoint }) {
           <Col className="d-flex flex-column justify-content-center" md={6}>
             <Lead>
               Blocked rooms and shuttle transportation to the Roxbury Barn and
-              Estate are available from the following two establishments.
+              Estate are available from the following establishment.
             </Lead>
-            <section className="mb-3">
-              <p>
-                <Bold>The Kaatskill Mountain Club</Bold> <br />
-                62 Liftside Drive <br />
-                Hunter, NY 12442 <br />
-                (518)263-5580
-              </p>
-              <Row>
-                <Col xs={6}>
-                  <IconButton
-                    block
-                    href="https://www.huntermtn.com/on-site-lodging/the-kaatskill-mountain-club/"
-                    icon="globe"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Visit&nbsp;website
-                  </IconButton>
-                </Col>
-                <Col className="d-md-none" xs={6}>
-                  <IconButton block href="tel:+15182635580" icon="phone">
-                    Call
-                  </IconButton>
-                </Col>
-              </Row>
-            </section>
             <section>
               <p>
                 <Bold>The Hunter Inn</Bold> <br />
