@@ -73,13 +73,13 @@ export default function Explore({ mediumBreakpoint }) {
               <p>
                 64 Klein Ave <br />
                 Hunter, NY 12442 <br />
-                (607)326-3500
+                (800)486-8376
               </p>
               <Row>
                 <Col xs={6}>
                   <IconButton
                     block
-                    href="https://www.plattekill.com"
+                    href="https://www.huntermtn.com"
                     icon="globe"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -88,7 +88,7 @@ export default function Explore({ mediumBreakpoint }) {
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>
-                  <IconButton block href="tel:+16073263500" icon="phone">
+                  <IconButton block href="tel:+18004868376" icon="phone">
                     Call
                   </IconButton>
                 </Col>
