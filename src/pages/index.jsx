@@ -50,7 +50,7 @@ export default class IndexPage extends React.Component {
         <Wedding mediumBreakpoint={isUnderMediumBreakpoint} />
         <Accommodations mediumBreakpoint={isUnderMediumBreakpoint} />
         <Travel mediumBreakpoint={isUnderMediumBreakpoint} />
-        <Registry mediumBreakpoint={isUnderMediumBreakpoint} />
+        {/* <Registry mediumBreakpoint={isUnderMediumBreakpoint} /> */}
         <Photos mediumBreakpoint={isUnderMediumBreakpoint} />
         <Explore mediumBreakpoint={isUnderMediumBreakpoint} />
       </Layout>
