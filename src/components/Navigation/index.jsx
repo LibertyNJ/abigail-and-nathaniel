@@ -49,7 +49,7 @@ export default class Navigation extends React.Component {
             <NavItem href="#wedding">Wedding</NavItem>
             <NavItem href="#accommodations">Accommodations</NavItem>
             <NavItem href="#travel">Travel</NavItem>
-            {/* <NavItem href="#registry">Registry</NavItem> */}
+            <NavItem href="#registry">Registry</NavItem>
             <NavItem href="#photos">Photos</NavItem>
             <NavItem href="#explore">Explore</NavItem>
           </Nav>
