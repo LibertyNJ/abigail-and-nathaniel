@@ -1,5 +1,3 @@
-'use-strict';
-
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
@@ -8,7 +6,7 @@ import Lead from '../components/Lead';
 import MajorSection from '../components/MajorSection';
 import AmazonLogo from '../components/SVG/AmazonLogo';
 import PotteryBarnLogo from '../components/SVG/PotteryBarnLogo';
-import WilliamsSonomaLogo from '../components/SVG/WilliamsSonomaLogo';
+import ZolaLogo from '../components/SVG/ZolaLogo';
 
 export default function Registry({ mediumBreakpoint }) {
   const data = useStaticQuery(graphql`
@@ -59,21 +57,21 @@ export default function Registry({ mediumBreakpoint }) {
             <Button
               block
               className="mb-3"
-              href="https://www.williams-sonoma.com/registry/znjdf8r5jw/registry-list.html"
-              rel="noopener noreferrer"
-              size="lg"
-              target="_blank"
-            >
-              <WilliamsSonomaLogo />
-            </Button>
-            <Button
-              block
               href="https://www.potterybarn.com/registry/znjdf8r5jw/registry-list.html"
               rel="noopener noreferrer"
               size="lg"
               target="_blank"
             >
               <PotteryBarnLogo />
+            </Button>
+            <Button
+              block
+              href="https://www.zola.com/registry/abigailandnathanielmay30"
+              rel="noopener noreferrer"
+              size="lg"
+              target="_blank"
+            >
+              <ZolaLogo />
             </Button>
           </Col>
         </Row>
