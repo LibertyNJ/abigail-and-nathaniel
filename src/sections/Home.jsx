@@ -1,5 +1,3 @@
-'use-strict';
-
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Container } from 'react-bootstrap';

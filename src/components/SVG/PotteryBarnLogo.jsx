@@ -1,8 +1,6 @@
-'use-strict';
-
 import React from 'react';
 
-export default function PotterBarnLogo({ ...restProps }) {
+export default function PotteryBarnLogo({ ...restProps }) {
   return (
     <svg
       fill="currentColor"

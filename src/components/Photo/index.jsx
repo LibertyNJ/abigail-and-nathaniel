@@ -1,5 +1,3 @@
-'use-strict';
-
 import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import React from 'react';
