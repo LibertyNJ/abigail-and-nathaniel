@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: `Nathaniel J. Liberty`,
     description: `Wedding of Abigail Richbourg and Nathaniel J. Liberty at Roxbury Barn on Saturday, May 30, 2020.`,
-    title: `Abigail & Nathaniel`,
+    title: `Wedding of Abigail & Nathaniel`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
