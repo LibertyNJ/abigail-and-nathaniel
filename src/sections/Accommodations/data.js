@@ -1,6 +1,16 @@
 export const accommodationsData = [
   {
     city: 'Hunter',
+    name: 'The Kaatskill Mountain Club',
+    state: 'NY',
+    street: '62 Liftside Drive',
+    phoneNumber: '5182635580',
+    websiteAddress:
+      'https://www.huntermtn.com/on-site-lodging/the-kaatskill-mountain-club/',
+    zip: '12442',
+  },
+  {
+    city: 'Hunter',
     name: 'The Hunter Inn',
     state: 'NY',
     street: '7433 Main Street',
@@ -35,6 +45,15 @@ export const otherAccommodationsData = [
     street: '2258 County Highway 41',
     phoneNumber: '6073267200',
     websiteAddress: 'http://theroxburymotel.com/',
+    zip: '12474',
+  },
+  {
+    city: 'Roxbury',
+    name: 'The Roxbury at Stratton Falls',
+    state: 'NY',
+    street: '48 County Road 41',
+    phoneNumber: '6073267200',
+    websiteAddress: 'https://www.theroxburyatstrattonfalls.com/',
     zip: '12474',
   },
   {
