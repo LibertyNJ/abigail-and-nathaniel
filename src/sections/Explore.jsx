@@ -17,9 +17,11 @@ export default function Explore({ mediumBreakpoint }) {
       }
     }
   `);
+
   const backgroundOverlay = mediumBreakpoint
     ? 'linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75))'
     : 'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))';
+
   return (
     <MajorSection
       backgroundImage={data.file.childImageSharp.fluid}
@@ -27,12 +29,12 @@ export default function Explore({ mediumBreakpoint }) {
       className="d-flex flex-column"
       heading="Explore"
       id="explore"
-      style={{ backgroundPosition: '87.5% 0%' }}
+      style={{ backgroundPosition: '92.5% 0%' }}
     >
       <Container className="d-flex flex-column flex-grow-1">
         <Row className="flex-grow-1">
           <Col className="d-flex flex-column justify-content-center" md={6}>
-            <section className="mb-3">
+            <section className="mb-4">
               <h3>Antiques at Rick's Barn</h3>
               <p>
                 Pick through the “largest inventory of antiques in the Catskill
@@ -52,7 +54,7 @@ export default function Explore({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Visit&nbsp;website
+                    Website
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>
@@ -62,7 +64,7 @@ export default function Explore({ mediumBreakpoint }) {
                 </Col>
               </Row>
             </section>
-            <section className="mb-3">
+            <section className="mb-4">
               <h3>Hunter Mountain</h3>
               <p>
                 Get back to nature on a hiking trail or get some air on a
@@ -82,7 +84,7 @@ export default function Explore({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Visit&nbsp;website
+                    Website
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>
@@ -92,7 +94,7 @@ export default function Explore({ mediumBreakpoint }) {
                 </Col>
               </Row>
             </section>
-            <section className="mb-3">
+            <section className="mb-4">
               <h3>Kirkside Park</h3>
               <p>Stroll along the east branch of the Delaware River.</p>
               <p>
@@ -109,7 +111,7 @@ export default function Explore({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Visit&nbsp;website
+                    Website
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>
@@ -119,7 +121,7 @@ export default function Explore({ mediumBreakpoint }) {
                 </Col>
               </Row>
             </section>
-            <section className="mb-3">
+            <section className="mb-4">
               <h3>The Roxbury Arts Center</h3>
               <p>
                 Catch a performance or see an exhibit at the Walt Meade Gallery.
@@ -138,7 +140,7 @@ export default function Explore({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Visit&nbsp;website
+                    Website
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>
@@ -167,7 +169,7 @@ export default function Explore({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Visit&nbsp;website
+                    Website
                   </IconButton>
                 </Col>
                 <Col className="d-md-none" xs={6}>

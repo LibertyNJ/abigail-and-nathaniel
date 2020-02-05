@@ -20,9 +20,11 @@ export default function Travel({ mediumBreakpoint }) {
       }
     }
   `);
+
   const backgroundOverlay = mediumBreakpoint
     ? 'linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75))'
     : 'linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))';
+
   return (
     <MajorSection
       backgroundImage={data.file.childImageSharp.fluid}
@@ -38,10 +40,10 @@ export default function Travel({ mediumBreakpoint }) {
             className="d-flex flex-column justify-content-center"
             md={{ order: 2, span: 6 }}
           >
-            <section className="mb-3">
+            <section className="mb-5">
               <h3>By plane</h3>
               <Divider className="my-2 w-50" />
-              <section className="mb-3">
+              <section className="mb-4">
                 <p>
                   <Bold>Albany International Airport</Bold> <br />
                   Albany Shaker Road <br />
@@ -56,7 +58,7 @@ export default function Travel({ mediumBreakpoint }) {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Find&nbsp;flights
+                      Flights
                     </IconButton>
                   </Col>
                   <Col xs={6}>
@@ -67,7 +69,7 @@ export default function Travel({ mediumBreakpoint }) {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Visit&nbsp;website
+                      Website
                     </IconButton>
                   </Col>
                 </Row>
@@ -87,7 +89,7 @@ export default function Travel({ mediumBreakpoint }) {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Find&nbsp;flights
+                      Flights
                     </IconButton>
                   </Col>
                   <Col xs={6}>
@@ -98,7 +100,7 @@ export default function Travel({ mediumBreakpoint }) {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Visit&nbsp;website
+                      Website
                     </IconButton>
                   </Col>
                 </Row>
@@ -120,7 +122,7 @@ export default function Travel({ mediumBreakpoint }) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    Get&nbsp;directions
+                    Directions
                   </IconButton>
                 </Col>
               </Row>

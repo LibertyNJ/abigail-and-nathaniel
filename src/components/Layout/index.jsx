@@ -15,7 +15,7 @@ export default class Layout extends React.PureComponent {
     return (
       <>
         <Navigation id="navigation" />
-        <main style={{ marginTop: '72px' }}>{this.props.children}</main>
+        <main>{this.props.children}</main>
         <Footer />
       </>
     );

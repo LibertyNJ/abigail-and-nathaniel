@@ -24,7 +24,7 @@ export default class Navigation extends React.Component {
         className="shadow-sm"
         collapseOnSelect={true}
         expand="md"
-        fixed="top"
+        sticky="top"
         onToggle={this.handleToggle}
         {...restProps}
       >

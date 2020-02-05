@@ -30,7 +30,7 @@ export default function Registry({ mediumBreakpoint }) {
       className="d-flex flex-column"
       heading="Registry"
       id="registry"
-      style={{ backgroundPosition: '7.5% 0%' }}
+      style={{ backgroundPosition: '12.5% 0%' }}
     >
       <Container className="d-flex flex-column flex-grow-1">
         <Row className="flex-grow-1">
@@ -47,6 +47,16 @@ export default function Registry({ mediumBreakpoint }) {
             <Button
               block
               className="mb-3"
+              href="https://www.zola.com/registry/abigailandnathanielmay30"
+              rel="noopener noreferrer"
+              size="lg"
+              target="_blank"
+            >
+              <ZolaLogo />
+            </Button>
+            <Button
+              block
+              className="mb-3"
               href="https://www.amazon.com/wedding/nathaniel-liberty-abigail-richbourg-roxbury-may-2020/registry/2OC9S4LBNCOQW"
               rel="noopener noreferrer"
               size="lg"
@@ -56,22 +66,12 @@ export default function Registry({ mediumBreakpoint }) {
             </Button>
             <Button
               block
-              className="mb-3"
               href="https://www.potterybarn.com/registry/znjdf8r5jw/registry-list.html"
               rel="noopener noreferrer"
               size="lg"
               target="_blank"
             >
               <PotteryBarnLogo />
-            </Button>
-            <Button
-              block
-              href="https://www.zola.com/registry/abigailandnathanielmay30"
-              rel="noopener noreferrer"
-              size="lg"
-              target="_blank"
-            >
-              <ZolaLogo />
             </Button>
           </Col>
         </Row>

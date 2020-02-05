@@ -13,6 +13,7 @@ MajorSection.propTypes = {
   className: PropTypes.string,
   heading: PropTypes.string,
   id: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
 
 export default function MajorSection({
@@ -22,6 +23,7 @@ export default function MajorSection({
   className,
   heading,
   id,
+  style,
   ...restProps
 }) {
   const componentClassName = reduceClassName('section', className);
@@ -30,6 +32,7 @@ export default function MajorSection({
       className={componentClassName}
       fluid={[backgroundOverlay, backgroundImage]}
       id={id}
+      style={{ backgroundAttachment: 'fixed', ...style }}
       Tag="section"
       {...restProps}
     >

@@ -28,12 +28,12 @@ export default function Accommodations({ mediumBreakpoint }) {
       className="d-flex flex-column"
       heading="Accommodations"
       id="accommodations"
-      style={{ backgroundPosition: '77.5% 60%' }}
+      style={{ backgroundPosition: '87.5% 60%' }}
     >
       <Container className="d-flex flex-column flex-grow-1">
         <Row className="flex-grow-1">
           <Col className="d-flex flex-column justify-content-center" md={6}>
-            <section className="mb-3">
+            <section className="mb-5">
               <h3>Blocked rooms</h3>
               <p>
                 Reserved rooms and shuttle transportation to the Roxbury Barn
@@ -61,7 +61,7 @@ function mapDataToAccommodations(data) {
   const lastAccommodationData = accommodationData.pop();
   const Accommodations = accommodationData.map(accommodation => (
     <Accommodation
-      className="mb-3"
+      className="mb-4"
       key={accommodation.name}
       {...accommodation}
     />

@@ -10,7 +10,7 @@ export default function Footer({ ...restProps }) {
     >
       <CopyrightWidget
         className="mb-0"
-        copyrightHolder="Abigail Richbourg and Nathaniel J. Liberty"
+        copyrightHolder="Abigail&nbsp;Richbourg and Nathaniel&nbsp;J.&nbsp;Liberty"
         initialCopyrightYear={2019}
       />
     </footer>

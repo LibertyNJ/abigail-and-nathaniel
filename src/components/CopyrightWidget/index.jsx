@@ -14,7 +14,9 @@ export default function CopyrightWidget({
   const copyrightYears = getCopyrightYears(initialCopyrightYear);
   return (
     <p {...restProps}>
-      © {copyrightHolder} {copyrightYears}.
+      <small>
+        © {copyrightHolder} {copyrightYears}
+      </small>
     </p>
   );
 }

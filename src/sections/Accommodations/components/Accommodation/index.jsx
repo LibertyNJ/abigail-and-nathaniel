@@ -42,7 +42,7 @@ export default function Accommodation({
             rel="noopener noreferrer"
             target="_blank"
           >
-            Visit&nbsp;website
+            Website
           </IconButton>
         </Col>
         <Col className="d-md-none" xs={6}>
