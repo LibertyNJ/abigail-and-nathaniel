@@ -18,9 +18,11 @@ export default function Accommodations({ mediumBreakpoint }) {
       }
     }
   `);
+
   const backgroundOverlay = mediumBreakpoint
     ? 'linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75))'
     : 'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))';
+
   return (
     <MajorSection
       backgroundImage={data.file.childImageSharp.fluid}

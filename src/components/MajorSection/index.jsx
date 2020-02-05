@@ -1,5 +1,5 @@
 import BackgroundImage from 'gatsby-background-image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { reduceClassName } from '../../util';
@@ -26,13 +26,32 @@ export default function MajorSection({
   style,
   ...restProps
 }) {
+  const [
+    deviceSupportsBackgroundAttachmentFixed,
+    setDeviceSupportsBackgroundAttachmentFixed,
+  ] = useState(false);
+
+  useEffect(() => {
+    if (
+      !window.navigator.userAgent.match(/(iPad|iPhone|iPod|Android|Silk)/gi)
+    ) {
+      setDeviceSupportsBackgroundAttachmentFixed(true);
+    }
+  }, []);
+
   const componentClassName = reduceClassName('section', className);
+
   return backgroundImage ? (
     <BackgroundImage
       className={componentClassName}
       fluid={[backgroundOverlay, backgroundImage]}
       id={id}
-      style={{ backgroundAttachment: 'fixed', ...style }}
+      style={{
+        backgroundAttachment: `${
+          deviceSupportsBackgroundAttachmentFixed ? 'fixed' : 'scroll'
+        }`,
+        ...style,
+      }}
       Tag="section"
       {...restProps}
     >
