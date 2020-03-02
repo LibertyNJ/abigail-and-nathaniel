@@ -55,7 +55,7 @@ export default function Wedding({ mediumBreakpoint }) {
             <section>
               <h3>When</h3>
               <Divider className="mx-auto my-2 w-25" />
-              <ul className="list-unstyled">
+              <ul className="list-unstyled mb-3">
                 <li>
                   <Bold>Pre-ceremony</Bold>: 4:00&nbsp;pm
                 </li>
@@ -69,6 +69,14 @@ export default function Wedding({ mediumBreakpoint }) {
                   <Bold>Reception</Bold>: 6:00&nbsp;pm
                 </li>
               </ul>
+            </section>
+            <section>
+              <h3>Dress</h3>
+              <Divider className="mx-auto my-2 w-25" />
+              <p>
+                Cocktail attire <br />
+                *Stilletos not recommended due to terrain
+              </p>
             </section>
           </Col>
         </Row>
