@@ -376,7 +376,7 @@ async function handleCodeFormSubmit(
 
   try {
     const result = await axios.get(
-      `${process.env.RSVP_SERVER_URL}/${rsvpCode}`
+      `${process.env.GATSBY_RSVP_SERVER_URL}/` + rsvpCode
     );
     setGuests(result.data);
     setAlertText(null);
@@ -398,7 +398,7 @@ async function handleRsvpFormSubmit(
   setAlertText('Sending RSVP…');
 
   try {
-    const result = await axios.post(process.env.RSVP_SERVER_URL, guests);
+    const result = await axios.post(process.env.GATSBY_RSVP_SERVER_URL, guests);
     setAlertText(result.data);
     setGuests([]);
     setRsvpCode('');
