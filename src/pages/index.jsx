@@ -8,6 +8,7 @@ import Accommodations from '../sections/Accommodations';
 import Explore from '../sections/Explore';
 import Home from '../sections/Home';
 import Registry from '../sections/Registry';
+import RSVP from '../sections/RSVP';
 import Photos from '../sections/Photos';
 import Travel from '../sections/Travel';
 import Wedding from '../sections/Wedding';
@@ -51,6 +52,7 @@ export default class IndexPage extends React.Component {
         <Registry mediumBreakpoint={isUnderMediumBreakpoint} />
         <Photos mediumBreakpoint={isUnderMediumBreakpoint} />
         <Explore mediumBreakpoint={isUnderMediumBreakpoint} />
+        <RSVP mediumBreakpoint={isUnderMediumBreakpoint} />
       </Layout>
     );
   };

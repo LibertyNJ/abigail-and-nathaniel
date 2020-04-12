@@ -5,7 +5,7 @@ import CopyrightWidget from '../CopyrightWidget';
 export default function Footer({ ...restProps }) {
   return (
     <footer
-      className="bg-dark d-flex justify-content-around p-2 text-secondary"
+      className="bg-dark d-flex justify-content-around p-2 text-primary"
       {...restProps}
     >
       <CopyrightWidget

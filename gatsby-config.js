@@ -1,7 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     author: `Nathaniel J. Liberty`,
-    description: `Wedding of Abigail Richbourg and Nathaniel J. Liberty at Roxbury Barn on Saturday, May 30, 2020.`,
+    description: `Wedding of Abigail Richbourg and Nathaniel J. Liberty at Roxbury Barn on Saturday, October 17, 2020.`,
     title: `Wedding of Abigail & Nathaniel`,
   },
   plugins: [

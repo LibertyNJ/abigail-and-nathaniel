@@ -41,7 +41,7 @@ export default function Wedding({ mediumBreakpoint }) {
           >
             <Lead>
               We are getting married <br />
-              <Bold>Saturday,&nbsp;May&nbsp;30,&nbsp;2020</Bold>.
+              <Bold>Saturday,&nbsp;October&nbsp;17,&nbsp;2020</Bold>.
             </Lead>
             <section>
               <h3>Where</h3>
