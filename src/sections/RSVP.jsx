@@ -376,12 +376,23 @@ async function handleCodeFormSubmit(
 
   try {
     const result = await axios.get(
-      `${process.env.GATSBY_RSVP_SERVER_URL}/` + rsvpCode
+      process.env.GATSBY_RSVP_SERVER_URL + `/guests/?rsvpCode=${rsvpCode}`
     );
-    setGuests(result.data);
-    setAlertText(null);
+
+    const guests = result.data;
+
+    if (guests.length > 0) {
+      setGuests(result.data);
+      setAlertText(null);
+    } else {
+      setAlertText(
+        `No guests found for RSVP code "${rsvpCode}". Please check your RSVP code and try again.`
+      );
+      setAlertIsDismissible(true);
+    }
   } catch (error) {
-    setAlertText(error.response.data);
+    console.error(error);
+    setAlertText('An unexpected error occurred. Please try again.');
     setAlertIsDismissible(true);
   }
 }
@@ -398,12 +409,12 @@ async function handleRsvpFormSubmit(
   setAlertText('Sending RSVP…');
 
   try {
-    const result = await axios.post(process.env.GATSBY_RSVP_SERVER_URL, guests);
-    setAlertText(result.data);
+    await axios.patch(process.env.GATSBY_RSVP_SERVER_URL + '/guests', guests);
+    setAlertText('Guests updated. Thank you for your RSVP!');
     setGuests([]);
     setRsvpCode('');
   } catch (error) {
-    setAlertText(error.response.data);
+    setAlertText('An unexpected error occurred. Please try again.');
   } finally {
     setAlertIsDismissible(true);
   }
