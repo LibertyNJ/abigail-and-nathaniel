@@ -3,11 +3,11 @@ import {
   faBars,
   faCar,
   faCheck,
+  faChevronRight,
   faEnvelope,
   faGlobe,
   faPhone,
   faPlane,
-  faSearch,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,10 +15,10 @@ export default library.add(
   faBars,
   faCar,
   faCheck,
+  faChevronRight,
   faEnvelope,
   faGlobe,
   faPhone,
   faPlane,
-  faSearch,
-  faTimes,
+  faTimes
 );

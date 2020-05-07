@@ -36,8 +36,8 @@ export default function RSVP({ mediumBreakpoint }) {
   const [guests, setGuests] = useState([]);
   const [rsvpCode, setRsvpCode] = useState('');
 
-  const guestSections = guests.map((guest, index, guests) => (
-    <GuestSection
+  const weddingGuestSections = guests.map((guest, index, guests) => (
+    <WeddingGuestSection
       alertIsActive={!!alertText}
       guest={guest}
       guestIndex={index}
@@ -52,6 +52,17 @@ export default function RSVP({ mediumBreakpoint }) {
       previousStatus || guest.isInvitedToRehearsalDinner,
     false
   );
+
+  const rehearsalDinnerGuestSections = guests.map((guest, index, guests) => (
+    <RehearsalDinnerGuestSection
+      alertIsActive={!!alertText}
+      guest={guest}
+      guestIndex={index}
+      guests={guests}
+      key={index}
+      setGuests={setGuests}
+    />
+  ));
 
   return (
     <MajorSection
@@ -97,10 +108,10 @@ export default function RSVP({ mediumBreakpoint }) {
                     <InputGroup.Append>
                       <IconButton
                         disabled={alertText}
-                        icon="search"
+                        icon="chevron-right"
                         type="submit"
                       >
-                        Search
+                        Submit
                       </IconButton>
                     </InputGroup.Append>
                   </InputGroup>
@@ -130,26 +141,31 @@ export default function RSVP({ mediumBreakpoint }) {
                   </>
                 )}
                 {guestIsInvitedToRehearsalDinner && (
+                  <h4 style={{ fontWeight: 'bold' }}>Wedding and reception</h4>
+                )}
+                {weddingGuestSections}
+                {guestIsInvitedToRehearsalDinner && (
                   <>
-                    <h4>Rehearsal dinner</h4>
+                    <Divider className="mb-3" />
+                    <h4 style={{ fontWeight: 'bold' }}>Rehearsal dinner</h4>
+                    <p>In the outdoor pavillion of the&hellip;</p>
                     <p>
-                      At least one guest in your party is invited to attend the
-                      rehearsal dinner.
-                    </p>
-                    <p>
-                      Friday, October 16, 2020 <br />
-                      6:00 pm
-                    </p>
-                    <p>
-                      Phoenicia Diner <br />
+                      <b>Phoenicia Diner</b> <br />
                       5681 NY-28 <br />
                       Phoenicia, New York
                     </p>
-                    <p>Casual attire</p>
-                    <Divider className="mb-3" />
+                    <p>
+                      Friday, October 16, 2020 <br />
+                      5:30 to 8:30&nbsp;pm
+                    </p>
+                    <p>
+                      Casual attire <br />
+                      *Fall jacket and scarf recommended
+                    </p>
+                    {rehearsalDinnerGuestSections}
                   </>
                 )}
-                {guestSections}
+                <Divider className="mb-3" />
                 <IconButton
                   block
                   disabled={alertText}
@@ -197,170 +213,210 @@ export default function RSVP({ mediumBreakpoint }) {
   );
 }
 
-function GuestSection({ alertIsActive, guest, guestIndex, guests, setGuests }) {
+function WeddingGuestSection({
+  alertIsActive,
+  guest,
+  guestIndex,
+  guests,
+  setGuests,
+}) {
   return (
-    <>
-      <fieldset>
-        <legend>Guest #{guestIndex + 1}</legend>
-        <Form.Row>
-          <Col xs={3}>
-            <Form.Group controlId={`title-${guestIndex}`}>
-              <Form.Label>Title</Form.Label>
-              <Form.Control
-                disabled={alertIsActive}
-                name="title"
-                onChange={event =>
-                  handleGuestInputChange(event, guests, guestIndex, setGuests)
-                }
-                placeholder="Ms…"
-                required
-                type="text"
-                value={guest.title}
-              />
-            </Form.Group>
-          </Col>
-          <Col xs={9}>
-            <Form.Group controlId={`name-${guestIndex}`}>
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                disabled={alertIsActive}
-                name="name"
-                onChange={event =>
-                  handleGuestInputChange(event, guests, guestIndex, setGuests)
-                }
-                placeholder="Please enter a name…"
-                required
-                type="text"
-                value={guest.name}
-              />
-            </Form.Group>
-          </Col>
-        </Form.Row>
-        <fieldset className="mb-3">
-          <Form.Check
-            checked={guest.isAttendingWedding === true ? true : false}
-            custom
-            disabled={alertIsActive}
-            id={`is-attending-wedding-true-${guestIndex}`}
-            inline
-            label="Happily accepts"
-            name={`isAttendingWedding-${guestIndex}`}
-            onChange={event =>
-              handleGuestInputChange(event, guests, guestIndex, setGuests)
-            }
-            required
-            type="radio"
-            value={true}
-          />
-          <Form.Check
-            checked={guest.isAttendingWedding === false ? true : false}
-            custom
-            disabled={alertIsActive}
-            id={`is-attending-wedding-false-${guestIndex}`}
-            inline
-            label="Regretfully declines"
-            name={`isAttendingWedding-${guestIndex}`}
-            onChange={event =>
-              handleGuestInputChange(event, guests, guestIndex, setGuests)
-            }
-            required
-            type="radio"
-            value={false}
-          />
-        </fieldset>
-        <fieldset className="mb-3">
-          <legend style={{ fontSize: '1.125rem' }}>
-            Please select your choice of entrée:
-          </legend>
-          <Form.Check
-            checked={guest.entree === 'beef'}
-            custom
-            disabled={!guest.isAttendingWedding || alertIsActive}
-            id={`entree-beef-${guestIndex}`}
-            inline
-            label="Beef"
-            name={`entree-${guestIndex}`}
-            onChange={event =>
-              handleGuestInputChange(event, guests, guestIndex, setGuests)
-            }
-            required
-            type="radio"
-            value="beef"
-          />
-          <Form.Check
-            checked={guest.entree === 'chicken'}
-            custom
-            disabled={!guest.isAttendingWedding || alertIsActive}
-            id={`entree-chicken-${guestIndex}`}
-            inline
-            label="Chicken"
-            name={`entree-${guestIndex}`}
-            onChange={event =>
-              handleGuestInputChange(event, guests, guestIndex, setGuests)
-            }
-            required
-            type="radio"
-            value="chicken"
-          />
-          <Form.Check
-            checked={guest.entree === 'vegan'}
-            custom
-            disabled={!guest.isAttendingWedding || alertIsActive}
-            id={`entree-vegan-${guestIndex}`}
-            inline
-            label="Vegan"
-            name={`entree-${guestIndex}`}
-            onChange={event =>
-              handleGuestInputChange(event, guests, guestIndex, setGuests)
-            }
-            required
-            type="radio"
-            value="vegan"
-          />
-        </fieldset>
-        {guest.isInvitedToRehearsalDinner && (
-          <fieldset className="mb-3">
-            <legend style={{ fontSize: '1.125rem' }}>
-              You are invited to attend the rehearsal dinner! May we expect the
-              pleasure of your company?
-            </legend>
-            <Form.Check
-              checked={guest.isAttendingRehearsalDinner === true ? true : false}
-              custom
-              disabled={!guest.isAttendingWedding || alertIsActive}
-              id={`is-attending-rehearsal-dinner-true-${guestIndex}`}
-              inline
-              label="Yes"
-              name={`isAttendingRehearsalDinner-${guestIndex}`}
+    <fieldset>
+      {guests.length > 1 && <legend>Guest #{guestIndex + 1}</legend>}
+      <Form.Row>
+        <Col xs={3}>
+          <Form.Group controlId={`title-${guestIndex}`}>
+            <Form.Label>Title</Form.Label>
+            <Form.Control
+              disabled={alertIsActive}
+              name="title"
               onChange={event =>
                 handleGuestInputChange(event, guests, guestIndex, setGuests)
               }
+              placeholder="Ms…"
               required
-              type="radio"
-              value={true}
+              type="text"
+              value={guest.title}
             />
-            <Form.Check
-              checked={
-                guest.isAttendingRehearsalDinner === false ? true : false
-              }
-              custom
-              disabled={!guest.isAttendingWedding || alertIsActive}
-              id={`is-attending-rehearsal-dinner-false-${guestIndex}`}
-              inline
-              label="No"
-              name={`isAttendingRehearsalDinner-${guestIndex}`}
+          </Form.Group>
+        </Col>
+        <Col xs={9}>
+          <Form.Group controlId={`name-${guestIndex}`}>
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              disabled={alertIsActive}
+              name="name"
               onChange={event =>
                 handleGuestInputChange(event, guests, guestIndex, setGuests)
               }
+              placeholder="Please enter a name…"
               required
-              type="radio"
-              value={false}
+              type="text"
+              value={guest.name}
             />
-          </fieldset>
-        )}
+          </Form.Group>
+        </Col>
+      </Form.Row>
+      <fieldset className="mb-3">
+        <Form.Check
+          checked={guest.isAttendingWedding === true ? true : false}
+          custom
+          disabled={alertIsActive}
+          id={`is-attending-wedding-true-${guestIndex}`}
+          inline
+          label="Happily accepts"
+          name={`isAttendingWedding-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value={true}
+        />
+        <Form.Check
+          checked={guest.isAttendingWedding === false ? true : false}
+          custom
+          disabled={alertIsActive}
+          id={`is-attending-wedding-false-${guestIndex}`}
+          inline
+          label="Regretfully declines"
+          name={`isAttendingWedding-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value={false}
+        />
       </fieldset>
-      <Divider className="mb-3" />
-    </>
+      <fieldset className="mb-3">
+        <legend style={{ fontSize: '1.125rem' }}>
+          Please select your choice of entrée:
+        </legend>
+        <Form.Check
+          checked={guest.entree === 'beef'}
+          custom
+          disabled={!guest.isAttendingWedding || alertIsActive}
+          id={`entree-beef-${guestIndex}`}
+          inline
+          label="Beef"
+          name={`entree-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value="beef"
+        />
+        <Form.Check
+          checked={guest.entree === 'chicken'}
+          custom
+          disabled={!guest.isAttendingWedding || alertIsActive}
+          id={`entree-chicken-${guestIndex}`}
+          inline
+          label="Chicken"
+          name={`entree-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value="chicken"
+        />
+        <Form.Check
+          checked={guest.entree === 'vegan'}
+          custom
+          disabled={!guest.isAttendingWedding || alertIsActive}
+          id={`entree-vegan-${guestIndex}`}
+          inline
+          label="Vegan"
+          name={`entree-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value="vegan"
+        />
+      </fieldset>
+      <Form.Row>
+        <Col>
+          <Form.Group controlId={`accommodations-${guestIndex}`}>
+            <Form.Label>Where are you staying?</Form.Label>
+            <Form.Control
+              as="textarea"
+              disabled={!guest.isAttendingWedding || alertIsActive}
+              onChange={event =>
+                handleGuestInputChange(event, guests, guestIndex, setGuests)
+              }
+              placeholder={`Random Inn
+123 Any Street
+Roxbury, NY 12474…`}
+              rows={3}
+              value={guest.accommodations}
+            />
+            <Form.Text>
+              Optional: This will help us arrange transportation.
+            </Form.Text>
+          </Form.Group>
+        </Col>
+      </Form.Row>
+    </fieldset>
+  );
+}
+
+function RehearsalDinnerGuestSection({
+  alertIsActive,
+  guest,
+  guestIndex,
+  guests,
+  setGuests,
+}) {
+  return (
+    <fieldset>
+      {guests.length > 1 && (
+        <legend>
+          {guest.name
+            ? `${guest.title && `${guest.title} `}${guest.name}`
+            : `Guest #${guestIndex + 1}`}
+        </legend>
+      )}
+      <fieldset className="mb-3">
+        <legend style={{ fontSize: '1.125rem' }}>
+          May we expect the pleasure of your company at the rehearsal dinner?
+        </legend>
+        <Form.Check
+          checked={guest.isAttendingRehearsalDinner === true ? true : false}
+          custom
+          disabled={!guest.isAttendingWedding || alertIsActive}
+          id={`is-attending-rehearsal-dinner-true-${guestIndex}`}
+          inline
+          label="Yes"
+          name={`isAttendingRehearsalDinner-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value={true}
+        />
+        <Form.Check
+          checked={guest.isAttendingRehearsalDinner === false ? true : false}
+          custom
+          disabled={!guest.isAttendingWedding || alertIsActive}
+          id={`is-attending-rehearsal-dinner-false-${guestIndex}`}
+          inline
+          label="No"
+          name={`isAttendingRehearsalDinner-${guestIndex}`}
+          onChange={event =>
+            handleGuestInputChange(event, guests, guestIndex, setGuests)
+          }
+          required
+          type="radio"
+          value={false}
+        />
+      </fieldset>
+    </fieldset>
   );
 }
 
