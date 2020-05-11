@@ -141,13 +141,13 @@ export default function RSVP({ mediumBreakpoint }) {
                   </>
                 )}
                 {guestIsInvitedToRehearsalDinner && (
-                  <h4 style={{ fontWeight: 'bold' }}>Wedding and reception</h4>
+                  <h4 style={{ fontWeight: 'bold' }}>Wedding and Reception</h4>
                 )}
                 {weddingGuestSections}
                 {guestIsInvitedToRehearsalDinner && (
                   <>
                     <Divider className="mb-3" />
-                    <h4 style={{ fontWeight: 'bold' }}>Rehearsal dinner</h4>
+                    <h4 style={{ fontWeight: 'bold' }}>Rehearsal Dinner</h4>
                     <p>In the outdoor pavillion of the&hellip;</p>
                     <p>
                       <b>Phoenicia Diner</b> <br />
