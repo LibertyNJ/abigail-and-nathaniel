@@ -346,6 +346,7 @@ function WeddingGuestSection({
             <Form.Control
               as="textarea"
               disabled={!guest.isAttendingWedding || alertIsActive}
+              name="accommodations"
               onChange={event =>
                 handleGuestInputChange(event, guests, guestIndex, setGuests)
               }
