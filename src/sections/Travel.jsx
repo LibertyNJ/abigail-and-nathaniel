@@ -53,7 +53,7 @@ export default function Travel({ mediumBreakpoint }) {
                   <Col xs={6}>
                     <IconButton
                       block
-                      href="https://www.google.com/flights?hl=en#flt=/m/286.ALB.2020-10-16*ALB./m/286.2020-10-18;c:USD;e:1;sd:1;t:f"
+                      href="https://www.google.com/flights?hl=en#flt=/m/286.ALB.2021-05-28*ALB./m/286.2021-05-30;c:USD;e:1;sd:1;t:f"
                       icon="plane"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -84,7 +84,7 @@ export default function Travel({ mediumBreakpoint }) {
                   <Col xs={6}>
                     <IconButton
                       block
-                      href="https://www.google.com/flights?hl=en#flt=/m/286.SWF.2020-10-16*SWF./m/286.2020-10-18;c:USD;e:1;sd:1;t:f"
+                      href="https://www.google.com/flights?hl=en#flt=/m/286.SWF.2020-05-28*SWF./m/286.2020-05-30;c:USD;e:1;sd:1;t:f"
                       icon="plane"
                       rel="noopener noreferrer"
                       target="_blank"

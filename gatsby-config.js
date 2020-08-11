@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     author: `Nathaniel J. Liberty`,
-    description: `Wedding of Abigail Richbourg and Nathaniel J. Liberty at Roxbury Barn on Saturday, October 17, 2020.`,
+    description: `Wedding of Abigail Richbourg and Nathaniel J. Liberty at Roxbury Barn on Saturday, May 29, 2021.`,
     title: `Wedding of Abigail & Nathaniel`,
   },
   plugins: [
@@ -32,8 +32,5 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

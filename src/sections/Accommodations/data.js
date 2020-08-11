@@ -22,15 +22,6 @@ export const accommodationsData = [
 export const otherAccommodationsData = [
   {
     city: 'Roxbury',
-    name: 'Queens Mountain Inn',
-    state: 'NY',
-    street: '53470 State Highway 30',
-    phoneNumber: '9173048053',
-    websiteAddress: 'http://queensmtninn.com/',
-    zip: '12474',
-  },
-  {
-    city: 'Roxbury',
     name: 'Roxbury Manor',
     state: 'NY',
     street: ' 53642 State Highway 30',
@@ -44,7 +35,7 @@ export const otherAccommodationsData = [
     state: 'NY',
     street: '2258 County Highway 41',
     phoneNumber: '6073267200',
-    websiteAddress: 'http://theroxburymotel.com/',
+    websiteAddress: 'https://theroxburyexperience.com/',
     zip: '12474',
   },
   {
@@ -53,25 +44,16 @@ export const otherAccommodationsData = [
     state: 'NY',
     street: '48 County Road 41',
     phoneNumber: '6073267200',
-    websiteAddress: 'https://www.theroxburyatstrattonfalls.com/',
+    websiteAddress: 'https://theroxburyexperience.com/',
     zip: '12474',
   },
   {
     city: 'Roxbury',
-    name: 'Scudder Hill House',
-    state: 'NY',
-    street: '24 County Highway 8',
-    phoneNumber: '6073267310',
-    websiteAddress: 'https://www.scudderhillhouse.com',
-    zip: '12474',
-  },
-  {
-    city: 'Roxbury',
-    name: 'Stylish Catskill Cabin',
+    name: 'Green Label Home Rentals',
     state: 'NY',
     street: '50 Maple Lane',
     phoneNumber: '8009139813',
-    websiteAddress: 'https://www.greenlabelhome.com/roxbury-contemporary.html',
+    websiteAddress: 'https://www.greenlabelhome.com/',
     zip: '12474',
   },
 ];

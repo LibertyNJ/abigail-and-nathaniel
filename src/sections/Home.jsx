@@ -41,7 +41,7 @@ export default function Home({ mediumBreakpoint }) {
       </Container>
       <Countdown
         className="flex-grow-0"
-        targetDate={new Date('2020-10-17T16:00:00-04:00')}
+        targetDate={new Date('2021-05-29T16:00:00-04:00')}
       />
     </MajorSection>
   );

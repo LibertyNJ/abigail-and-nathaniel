@@ -41,7 +41,7 @@ export default function Wedding({ mediumBreakpoint }) {
           >
             <Lead>
               We are getting married <br />
-              <Bold>Saturday,&nbsp;October&nbsp;17,&nbsp;2020</Bold>.
+              <Bold>Saturday,&nbsp;May&nbsp;29,&nbsp;2021</Bold>.
             </Lead>
             <section>
               <h3>Where</h3>
@@ -57,19 +57,19 @@ export default function Wedding({ mediumBreakpoint }) {
               <Divider className="mx-auto my-2 w-25" />
               <ul className="list-unstyled mb-3">
                 <li>
-                  <Bold>Arrival</Bold>: 3:00&nbsp;pm
+                  <Bold>Arrival</Bold>: 4:00&nbsp;pm
                 </li>
                 <li>
-                  <Bold>Ceremony</Bold>: 3:30&nbsp;pm
+                  <Bold>Ceremony</Bold>: 4:30&nbsp;pm
                 </li>
                 <li>
-                  <Bold>Cocktails</Bold>: 4:30&nbsp;pm
+                  <Bold>Cocktails</Bold>: 5:00&nbsp;pm
                 </li>
                 <li>
-                  <Bold>Reception</Bold>: 5:30&nbsp;pm
+                  <Bold>Reception</Bold>: 6:00&nbsp;pm
                 </li>
                 <li>
-                  <Bold>Bonfire</Bold>: 9:30&nbsp;pm
+                  <Bold>Bonfire</Bold>: 10:00&nbsp;pm
                 </li>
                 <li>
                   <Bold>Departure</Bold>: 11:00&nbsp;pm
