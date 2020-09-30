@@ -18,8 +18,6 @@ export const accommodationsData = [
     websiteAddress: 'http://www.hunterinn.com/',
     zip: '12442',
   },
-];
-export const otherAccommodationsData = [
   {
     city: 'Roxbury',
     name: 'Roxbury Manor',

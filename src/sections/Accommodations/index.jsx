@@ -3,7 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Accommodation from './components/Accommodation';
-import { accommodationsData, otherAccommodationsData } from './data';
+import { accommodationsData } from './data';
 import MajorSection from '../../components/MajorSection';
 
 export default function Accommodations({ mediumBreakpoint }) {
@@ -35,22 +35,7 @@ export default function Accommodations({ mediumBreakpoint }) {
       <Container className="d-flex flex-column flex-grow-1">
         <Row className="flex-grow-1">
           <Col className="d-flex flex-column justify-content-center" md={6}>
-            <section className="mb-5">
-              <h3>Blocked rooms</h3>
-              <p>
-                Reserved rooms and shuttle transportation to the Roxbury Barn
-                and Estate are available from:
-              </p>
-              {mapDataToAccommodations(accommodationsData)}
-            </section>
-            <section>
-              <h3>Other accommodations</h3>
-              <p>
-                Shuttle transportation to the Roxbury Barn and Estate will be
-                available from these other establishments:
-              </p>
-              {mapDataToAccommodations(otherAccommodationsData)}
-            </section>
+            {mapDataToAccommodations(accommodationsData)}
           </Col>
         </Row>
       </Container>
