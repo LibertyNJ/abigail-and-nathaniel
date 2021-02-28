@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 
 import '../scripts/font-awesome-icon-library';
 import Accommodations from '../sections/Accommodations';
+import Covid19 from '../sections/COVID-19'
 import Explore from '../sections/Explore';
 import Home from '../sections/Home';
 import Registry from '../sections/Registry';
@@ -51,6 +52,7 @@ export default class IndexPage extends React.Component {
         <Registry mediumBreakpoint={isUnderMediumBreakpoint} />
         <Photos mediumBreakpoint={isUnderMediumBreakpoint} />
         <Explore mediumBreakpoint={isUnderMediumBreakpoint} />
+        <Covid19 mediumBreakpoint={isUnderMediumBreakpoint} />
       </Layout>
     );
   };

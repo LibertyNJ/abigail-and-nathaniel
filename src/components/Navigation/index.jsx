@@ -50,6 +50,7 @@ export default class Navigation extends React.Component {
             <NavItem href="#registry">Registry</NavItem>
             <NavItem href="#photos">Photos</NavItem>
             <NavItem href="#explore">Explore</NavItem>
+            <NavItem href="#covid-19">COVID-19</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
